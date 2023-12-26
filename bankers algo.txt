@@ -1,0 +1,108 @@
+#include<stdio.h>
+#include<stdbool.h>
+#define max 10;
+#define maxresources 10;
+int main()
+{
+	int available[max];
+	int allocation[max][maxresources];
+	int maxmatrix[max][maxresources];
+	int need[max][maxresources];
+	int numprocess,numresources;
+	printf("enter the no: of process");
+	scanf("%d",&numprocess);
+	printf("enter the no: of resources");
+	scanf("%d",&numresources);
+	printf("entre the available resources\n");
+	for(int i=0;i<numresources;i++)
+	{
+		printf("resoures",i+1);
+		scanf("%d",&available[i]);
+	}
+	printf("enter allocation\n");
+	for(int i=0;i<numprocess;i++)
+	{  
+		printf("process %d\n",i+1);
+		for(int j=0;j<numresources;j++)
+		{
+			printf("resourse %d:",i+1);
+			scanf("%d",&allocation[i][j]);
+		}
+	}
+	printf("need matrix\n")
+	for(int i=0;i<numprocess;i++)
+	{  
+		printf("process %d\n",i+1);
+		for(int j=0;j<numresources;j++)
+		{
+			printf("maxneed %d:",i+1);
+			scanf("%d",&maxneed[i][j]);
+			need[i][j]=maxneed[i][j]-allocation[i][j];
+		}
+	}
+	int work[maxresources];
+	bool finish[max];
+	int safesequence[maxresources]
+	int i,j,k;
+	for(i=0;i<numresources;i++)
+	{
+		work[i]=available[i];
+	}
+	int cout=0;
+	while(count<numprocess)
+	  {
+		bool found=false;
+		for(i=0;i<numprocess;i++)
+		{
+			if(!finish[i])
+			{
+				bool canallocate=true;
+				for(j=0;j<numresources;j++)
+				{
+					if(need[i][j]>work[j]
+				{
+					canallocate=false;
+					break;
+				}
+			}
+			if(canallocate)
+			{
+				for(k=0;k<numresources;k++)
+				{
+					work[k]=work[k]+allocation[i][k]);
+				}
+			
+			finish[i]=true;
+			safesequence[count]=i;
+			count++;
+			found=true;
+		}}}
+		if(!found)
+		{
+		break;
+	}
+}
+if (count==numprocess)
+{
+	printf("satte safe")
+	{
+		for(i=0;i<numprocess;i++)
+		{
+			printf("%d",safesequence[i])
+		}
+	}
+	printf("need matric\n");
+	for(i=0;i<numprocess;i++)
+	{
+		printf("process %d \n",i+1);
+	}
+	for(j=0;i<numresources;j++)
+	{
+		printf("resource %d:%d\n",j+1,need[i][j]);
+	}
+}
+else
+{
+	printf("unsafe");
+}
+	
